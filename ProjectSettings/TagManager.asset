@@ -3,12 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - WaterBullet
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Postprocessing
   - Water
   - UI
   - Enemy
@@ -38,9 +39,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2626029509
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
   - name: Turrets
     uniqueID: 100911275
+    locked: 0
+  - name: UI
+    uniqueID: 2110167651
+    locked: 0
+  - name: Ground
+    uniqueID: 235416183
     locked: 0

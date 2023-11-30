@@ -9,7 +9,8 @@ public class WaterBullet : MonoBehaviour
 
     [Header("Attributes")]
     [SerializeField] private float bulletSpeed = 5f;
-    [SerializeField] private int bulletDamage = 1;
+    [SerializeField] private float bulletDamage = 2.5f;
+    [SerializeField] public string bulletType = "normal";
 
     private Transform target;
 
@@ -24,7 +25,7 @@ public class WaterBullet : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
-        other.gameObject.GetComponent<Health>().TakeDamage(bulletDamage);
+        other.gameObject.GetComponent<Health>().TakeDamage(bulletDamage, bulletType);
         Destroy(gameObject);
     }
 }
